@@ -1,6 +1,6 @@
 const AveltynStroke = () => {
   return (
-    <svg width="648" height="255" viewBox="0 0 648 255" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="648" className="translate-y-full aveltyn-stroke" height="255" viewBox="0 0 648 255" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask
         id="path-1-outside-1_7_2"
         maskUnits="userSpaceOnUse"
