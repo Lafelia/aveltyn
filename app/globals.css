@@ -24,6 +24,7 @@ html.lenis body {
 }
 
 body {
+  @apply tracking-tight;
   background-color: #030712;
   color: #f9fafb;
   min-height: 1000svh;

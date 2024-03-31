@@ -53,12 +53,36 @@ const Intro = () => {
         },
         "-=1.3"
       )
+      .to(
+        ".hello-wrapper",
+        {
+          width: "6rem",
+          duration: 1,
+        },
+        "<"
+      )
+      .to(
+        ".hello",
+        {
+          y: 0,
+          duration: 1,
+        },
+        "<"
+      )
+      .to(
+        ".line-hello",
+        {
+          width: "2.5rem",
+          duration: 1,
+        },
+        ">"
+      )
       .set(
         ".short-desc",
         {
           opacity: 1,
         },
-        "<"
+        "-=1.5"
       )
       .set(
         shortDesc.lines,
@@ -67,14 +91,19 @@ const Intro = () => {
         },
         "<"
       )
-      .from(shortDesc.words, {
-        yPercent: 100,
-        duration: 0.5,
-        ease: "power1.out",
-        stagger: {
-          amount: 0.8,
+      .from(
+        shortDesc.words,
+        {
+          color: "#030712",
+          yPercent: 100,
+          duration: 0.5,
+          ease: "power1.out",
+          stagger: {
+            amount: 0.8,
+          },
         },
-      }, "-=1.3");
+        "-=1.5"
+      );
   });
 
   return (
@@ -84,7 +113,6 @@ const Intro = () => {
         <AveltynStroke />
       </div>
       <ShortDesc />
-      
     </div>
   );
 };
