@@ -1,8 +1,6 @@
 import Bintang from "./Bintang";
 
 const ShortDesc = () => {
-
-
   return (
     <div className="short-desc-wrapper absolute z-10 bottom-36 ps-5">
       <div className="text-sm absolute bg-gray-50 text-gray-950 -top-6 left-0 ms-5 w-0 flex items-center overflow-hidden hello-wrapper">

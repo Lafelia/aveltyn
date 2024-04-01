@@ -61,6 +61,7 @@ const Intro = () => {
         },
         "<"
       )
+
       .to(
         ".hello",
         {
@@ -68,6 +69,20 @@ const Intro = () => {
           duration: 1,
         },
         "<"
+      )
+      .to(".bintang-atas", {
+        opacity: 1,
+        scale: 1,
+        duration: 0.3,
+      }, ">")
+      .to(
+        ".bintang-bawah",
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.3,
+        },
+        "-=0.4"
       )
       .to(
         ".line-hello",
@@ -77,24 +92,7 @@ const Intro = () => {
         },
         "-=150%"
       )
-      .to(
-        ".bintang-atas",
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 0.3,
-        },
-        "<"
-      )
-      .to(
-        ".bintang-bawah",
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 0.3,
-        },
-        "-=0.5"
-      )
+
       .set(
         ".short-desc",
         {
