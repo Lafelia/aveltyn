@@ -1,3 +1,5 @@
+import Bintang from "./Bintang";
+
 const ShortDesc = () => {
 
 
@@ -7,6 +9,7 @@ const ShortDesc = () => {
         <span className="translate-y-full hello shrink-0 mx-2">Hello</span>
         <span className="bg-gray-950 h-[1px] inline-block shrink-0 line-hello w-0"></span>
       </div>
+      <Bintang />
       <p className="leading-snug text-sm max-w-72 short-desc [font-kerning:none] opacity-0 overflow-y-hidden">
         Aftiyan here! a Web Developer who adores both technology and cuteness. My designs seamlessly blend innovation
         with charm, setting me apart in the dynamic field of web development.
@@ -16,4 +19,3 @@ const ShortDesc = () => {
 };
 
 export default ShortDesc;
- 

@@ -73,9 +73,27 @@ const Intro = () => {
         ".line-hello",
         {
           width: "2.5rem",
-          duration: 1,
+          duration: 0.5,
         },
-        ">"
+        "-=150%"
+      )
+      .to(
+        ".bintang-atas",
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.3,
+        },
+        "<"
+      )
+      .to(
+        ".bintang-bawah",
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.3,
+        },
+        "-=0.5"
       )
       .set(
         ".short-desc",
