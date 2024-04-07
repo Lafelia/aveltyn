@@ -8,7 +8,7 @@ import AveltynStroke from "./AveltynStroke";
 import AveltynFill from "./AveltynFill";
 import ShortDesc from "./ShortDesc";
 import SplitType from "split-type";
-import blobTop from "../public/blobTop.webp";
+import blobTop from "../public/BlobTop.webp";
 import Image from "next/image";
 import Navbar from "./Navbar";
 
