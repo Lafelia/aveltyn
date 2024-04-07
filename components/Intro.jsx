@@ -10,6 +10,7 @@ import ShortDesc from "./ShortDesc";
 import SplitType from "split-type";
 import blobTop from "../public/blobTop.webp";
 import Image from "next/image";
+import Navbar from "./Navbar";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -168,25 +169,7 @@ const Intro = () => {
       <div className="absolute -top-72 -left-[65%] w-[200vw] rotate-[17deg] -z-10 opacity-0 -translate-y-full blobTop">
         <Image src={blobTop} alt="Blob Top" />
       </div>
-      <div className="flex justify-between items-center overflow-y-hidden navbar relative">
-        <div className="absolute h-[1px] w-full scale-x-0 bottom-0 left-0 bg-gray-50/25 border-bottom-nav"></div>
-        <div className="self-stretch flex items-center px-5 nav-logo-wrapper">
-          <div className="overflow-hidden">
-            <span className="inline-block -skew-x-12 translate-y-full nav-logo">aveltyn</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-x-4 text-sm pe-5 py-4">
-          <div className="overflow-y-hidden">
-            <span className="inline-block translate-y-full nav-item">ME</span>
-          </div>
-          <div className="overflow-y-hidden">
-            <span className="inline-block translate-y-full nav-item">PROJECTS</span>
-          </div>
-          <div className="overflow-y-hidden">
-            <span className="inline-block translate-y-full nav-item">CONTACT</span>
-          </div>
-        </div>
-      </div>
+      <Navbar />
       <AveltynFill />
       <div className="absolute right-20 bottom-[40%] aveltyn-stroke-wrapper overflow-y-hidden z-10">
         <AveltynStroke />
