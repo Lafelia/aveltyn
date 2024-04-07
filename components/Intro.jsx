@@ -8,6 +8,8 @@ import AveltynStroke from "./AveltynStroke";
 import AveltynFill from "./AveltynFill";
 import ShortDesc from "./ShortDesc";
 import SplitType from "split-type";
+import blobTop from "../public/blobTop.webp";
+import Image from "next/image";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -54,6 +56,42 @@ const Intro = () => {
         "-=1.3"
       )
       .to(
+        ".blobTop",
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+        },
+        "-=1.5"
+      )
+      .to(
+        ".border-bottom-nav",
+        {
+          scaleX: 1,
+          duration: 0.5,
+        },
+        "<"
+      )
+      .to(
+        ".nav-logo",
+        {
+          y: 0,
+          duration: 1,
+        },
+        "-=1"
+      )
+      .to(
+        ".nav-item",
+        {
+          y: 0,
+          duration: 1,
+          stagger: {
+            amount: 0.3,
+          },
+        },
+        "<"
+      )
+      .to(
         ".hello-wrapper",
         {
           width: "6rem",
@@ -61,7 +99,6 @@ const Intro = () => {
         },
         "<"
       )
-
       .to(
         ".hello",
         {
@@ -70,11 +107,15 @@ const Intro = () => {
         },
         "<"
       )
-      .to(".bintang-atas", {
-        opacity: 1,
-        scale: 1,
-        duration: 0.3,
-      }, ">")
+      .to(
+        ".bintang-atas",
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 0.3,
+        },
+        ">"
+      )
       .to(
         ".bintang-bawah",
         {
@@ -98,7 +139,7 @@ const Intro = () => {
         {
           opacity: 1,
         },
-        "-=1.5"
+        "-=1"
       )
       .set(
         shortDesc.lines,
@@ -118,12 +159,34 @@ const Intro = () => {
             amount: 0.8,
           },
         },
-        "-=1.5"
+        "<"
       );
   });
 
   return (
     <div className="h-[100svh] relative">
+      <div className="absolute -top-72 -left-[65%] w-[200vw] rotate-[17deg] -z-10 opacity-0 -translate-y-full blobTop">
+        <Image src={blobTop} alt="Blob Top" />
+      </div>
+      <div className="flex justify-between items-center overflow-y-hidden navbar relative">
+        <div className="absolute h-[1px] w-full scale-x-0 bottom-0 left-0 bg-gray-50/25 border-bottom-nav"></div>
+        <div className="self-stretch flex items-center px-5 nav-logo-wrapper">
+          <div className="overflow-hidden">
+            <span className="inline-block -skew-x-12 translate-y-full nav-logo">aveltyn</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-x-4 text-sm pe-5 py-4">
+          <div className="overflow-y-hidden">
+            <span className="inline-block translate-y-full nav-item">ME</span>
+          </div>
+          <div className="overflow-y-hidden">
+            <span className="inline-block translate-y-full nav-item">PROJECTS</span>
+          </div>
+          <div className="overflow-y-hidden">
+            <span className="inline-block translate-y-full nav-item">CONTACT</span>
+          </div>
+        </div>
+      </div>
       <AveltynFill />
       <div className="absolute right-20 bottom-[40%] aveltyn-stroke-wrapper overflow-y-hidden z-10">
         <AveltynStroke />
