@@ -66,10 +66,18 @@ const Intro = () => {
         "-=1.5"
       )
       .to(
+        ".nav-logo-border",
+        {
+          scaleY: 1,
+          duration: 0.5,
+        },
+        "-=0.7"
+      )
+      .to(
         ".border-bottom-nav",
         {
           scaleX: 1,
-          duration: 0.5,
+          duration: 1,
         },
         "<"
       )
