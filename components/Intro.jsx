@@ -14,7 +14,7 @@ import Navbar from "./Navbar";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
-const Intro = () => {
+const Intro = ({ handleOnloadImage }) => {
   const tl = useRef(null);
 
   useGSAP(() => {
@@ -26,7 +26,7 @@ const Intro = () => {
         y: 0,
         duration: 1.5,
         ease: "power2.out",
-        delay: 1
+        delay: 1,
       })
       .to(
         ".aveltyn-stroke",
@@ -176,7 +176,16 @@ const Intro = () => {
   return (
     <div className="h-[100svh] relative">
       <div className="absolute -top-72 -left-[65%] w-[200vw] rotate-[17deg] -z-10 opacity-0 -translate-y-full blobTop">
-        <Image src={blobTop} alt="Blob Top" />
+        <Image
+          src={blobTop}
+          alt="Blob Top"
+          onLoad={async () => {
+            await new Promise((resolve) => setTimeout(resolve, 2000));
+
+            handleOnloadImage();
+          }}
+          priority
+        />
       </div>
       <Navbar />
       <AveltynFill />
